@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #faf7f2;
+    color: #242424;
+    font-family:Arial, Helvetica, sans-serif;
+}
+header, footer{
+    background-color: #efe8de;
+    border-radius: 12px;
+}
+footer{
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.logo{
+    width:67px;
+    height: 67px;
+    justify-self: flex-start;
+}
+.navbar ul{
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap:5px;
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 20px;
+    
+}
+ul a{
+    color:#242424;
+    text-decoration: none;
+}
+ul a:active{
+    color:green;
+}
+.navbar a:hover{
+    color:#faf6ee;
+    background-color: #354b3b;
+    
+}
+.navbar a{
+    border:2px solid #faf6ee;
+    border-radius: 10px;
+    background-color: #faf6ee;
+    padding:20px;
+    
+}
+.navbar li{
+    transition: 0.3s ease;
+}
+.navbar li:hover{
+    
+    transform: translateY(-2px);
+}
+main{
+    height: 100vh;
+}
+
+/*Main Section*/
+.arrow{
+    margin-top: 20px;
+    margin-left: 20px;
+    mix-blend-mode: multiply;
+    width: 50px;
+}
+h1{
+    font-weight: bold;
+}
+fieldset{
+    width: 100%;
+    clear:both;
+}
+legend{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+fieldset input, fieldset button{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 17px;
+    padding:5px;
+    color: black;
+    padding-left: 15px;
+}
+input::placeholder{
+    color:grey;
+}
+.btn{
+    width:50%;
+    float: right;
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-areas: "form order";
+    place-items: center;
+}
+form{
+    grid-area: form;
+    width:50%;
+}
+.order{
+    grid-area: order;
+    border: 2px solid grey;
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+.item{
+    display: flex;
+    align-items: center;
+    background-color: rgba(224, 222, 222, 0.9);    
+    padding: 25px;
+    width: 90%;
+    height: 200px;
+    border: 3px solid rgb(195, 203, 203);
+    border-radius: 10px;
+    clear:both;
+}
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pre-price {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
