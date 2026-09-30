@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <link rel="stylesheet" href="checkout.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+            <img class="logo" src="icon.png" alt="logo"/>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Catalog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="size-guide.html">Size Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            </div>
+        </header>
+        <div class="wrapper">
+            <main>
+                <a href=""><img class="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnt2nnWDFRxVVgGPrZ4izOQg_Dzi9MieO_K1J7xQ3kvA&s=10" alt="arrow left" /></a>
+                <h1>Checkout</h1>
+                <div class="parent">
+                    <form action="" method="POST">
+                    <fieldset>
+                        <legend>Contact info</legend>
+                        <input type="email" id="email" name="email" placeholder="Email" required/>
+                        <input type="text" id="phone" name="phone" placeholder="Phone" required/>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Shipping</legend>
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                        <input type="text" id="country" name="counrty" placeholder="Country">
+                        <input type="text" id="state" name="state" placeholder="State/Region">
+                        <input type="text" id="address" name="address" placeholder="Address">
+                        <input type="text" id="city" name="city" placeholder="City">
+                        <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code">
+                        <button class="btn" type="Submit">Shipping</button>
+                    </fieldset>
+                    </form>
+                    <div class="order">
+                        <h2>Your Order</h2>
+                        <div class="item">
+                            <img src="" alt="item image" />
+                            <article>
+                                <p class="pre-price">Black Heavy T-Shirt</p>
+                                <p class="pre-price">Black/L</p>
+                                <p class="price">$99</p>
+                            </article>
+                        </div>
+                        <article>
+                            <p class="pre-price">Total</p>
+                            <p class="price">$99</p>
+                        </article>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
