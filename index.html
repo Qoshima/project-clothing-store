@@ -3,29 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website</title>
+        <title>Clothing Store</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="top-bar">
+            <p>FREE SHIPPING ON ORDERS OVER $50 &nbsp;|&nbsp; 30-DAY RETURNS</p>
+        </div>
         <header>
-            <div class="navbar">
-            <img class="logo" src="icon.png" alt="logo"/>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Catalog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="size-guide.html">Size Guide</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="icosvg/icon.PNG" alt="logo"/>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">New In</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Sizes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Account"><img src="icosvg/account.svg" alt="Account"></a>
+                <a href="checkout.html" aria-label="Cart"><img src="icosvg/cart.svg" alt="Cart"></a>
             </div>
         </header>
-        <div class="wrapper">
-            <main>
-                <h1>Clothing Store</h1>
-                <p>This is a sample website created for demonstration purposes.</p>
-            </main>
-        </div>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Tamyr</h1>
+                <p>Curated essentials for the season ahead</p>
+                <div class="hero-btns">
+                    <a href="products.html" class="btn btn-dark">Shop Women</a>
+                    <a href="products.html" class="btn btn-outline">Shop Men</a>
+                </div>
+                <span class="scroll-hint">Scroll</span>
+            </div>
+            <div class="hero-image">
+                <img src="home_images/hero.PNG" alt="Fall/Winter 2024 Collection">
+            </div>
+        </section>
+        <section class="categories">
+            <div class="cat-card">
+                <img src="home_images/cat-new-in.png" alt="New In">
+                <span>New In</span>
+            </div>
+            <div class="cat-card">
+                <img src="home_images/cat-tshirts.png" alt="T-Shirts">
+                <span>T-Shirts</span>
+            </div>
+            <div class="cat-card">
+                <img src="home_images/cat-knitwear.png" alt="Knitwear">
+                <span>Knitwear</span>
+            </div>
+            <div class="cat-card">
+                <img src="home_images/cat-outerwear.png" alt="Outerwear">
+                <span>Outerwear</span>
+            </div>
+        </section>
         <footer>
             <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
