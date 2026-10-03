@@ -1,84 +1,161 @@
-*{
-    box-sizing: border-box;
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
-body{
-    background-color: #faf7f2;
-    color: #242424;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.hero,
+.table-wrapper,
+.measure-guide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
-header, footer{
-    background-color: #efe8de;
-    border-radius: 12px;
-}
-footer{
+.hero-text h1 {
+    font-family: "Isometra", serif;
+    font-style: normal;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 20px;
     text-align: center;
 }
-.wrapper{
-    flex: 1;
+.toggle {
+    position: absolute;
+    opacity: 0;
 }
-.navbar {
+.toggle-btns {
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 15px;
 }
-.logo{
-    width:67px;
-    height: 67px;
-    justify-self: flex-start;
+.table-section {
+    display: none;
 }
-.navbar ul{
-    display: flex;
-    justify-self: flex-end;
-    align-items: center;
-    flex-direction: row;
-    gap:5px;
-    list-style-type: none;
-    margin: 0 10px;
-    padding: 20px;
-    
+.table-wrapper{
+    margin-bottom: 50px;
 }
-a{
-    color:#242424;
-    text-decoration: none;
+#toggle-women:checked ~ .toggle-btns label[for="toggle-women"] {
+    background-color: #1a1a1a;
+    color: #f5f3ef;
 }
-a:active{
-    color:green;
+#toggle-women:checked ~ .toggle-btns label[for="toggle-men"] {
+    background-color: transparent;
+    color: #1a1a1a;
 }
-.navbar a:hover{
-    color:#faf6ee;
-    background-color: #354b3b;
-    
+#toggle-women:checked ~ #table-women {
+    display: block;
 }
-.navbar a{
-    border:2px solid #faf6ee;
-    border-radius: 10px;
-    background-color: #faf6ee;
-    padding:20px;
-    
+#toggle-men:checked ~ .toggle-btns label[for="toggle-men"] {
+    background-color: #1a1a1a;
+    color: #f5f3ef;
 }
-.navbar li{
-    transition: 0.3s ease;
+#toggle-men:checked ~ .toggle-btns label[for="toggle-women"] {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
 }
-.navbar li:hover{
-    
-    transform: translateY(-2px);
+#toggle-men:checked ~ #table-men {
+    display: block;
 }
-table, th, td{
-    padding:15px;
-    border:1px solid grey;
+.size-table {
+    width: 90%;
     border-collapse: collapse;
-}
-th{
-    background-color: #cdb78d;
-}
-td{
-    background-color: #efe8de;
-
-}
-main{
+    font-size: 14px;
     text-align: center;
     margin: 0 auto;
-    padding:25px;
+}
+.size-table thead th {
+    background-color: #1a1a1a;
+    color: #f5f3ef;
+    padding: 20px 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.size-table tbody td {
+    padding: 18px 10px;
+    color: #1a1a1a;
+}
+.size-table, .size-table th,
+.size-table td {
+    border: 1px solid #D3D3D3;
+}
+.size-table tbody tr:hover {
+    background-color: rgba(26, 26, 26, 0.03); 
+}
+.measure-guide {
+    padding: 60px 20px;
+    border-top: 1px solid #d8d0c5;
+}
+#measure-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.measure-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.measure-item {
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.measure-number {
+    display: block;
+    margin-bottom: 16px;
+    color: #66615b;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+.measure-item h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.measure-item p {
+    max-width: 280px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 56px;
+    }
+
+    #measure-title {
+        font-size: 32px;
+    }
+
+    .measure-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    
+    #measure-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .measure-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
 }
