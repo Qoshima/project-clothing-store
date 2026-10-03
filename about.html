@@ -3,31 +3,103 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
+        <title>About — Tamyr</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="about.css">
+        <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="top-bar">
+            <p>FREE SHIPPING ON ORDERS OVER 670,000 tenge &nbsp;|&nbsp; 30-DAY RETURNS</p>
+        </div>
         <header>
-            <div class="navbar">
-            <img class="logo" src="icon.png" alt="logo"/>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Catalog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="size-guide.html">Size Guide</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="icosvg/icon.PNG" alt="Tamyr - home"/>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">New In</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Sizes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="account.html" aria-label="Account"><img src="icosvg/account.svg" alt="Account"></a>
+                <a href="checkout.html" aria-label="Cart"><img src="icosvg/cart.svg" alt="Cart"></a>
             </div>
         </header>
-        <div class="wrapper">
-            <main>
-                <h1>About</h1>
-                <p>This is a sample website created for demonstration purposes.</p>
-            </main>
-        </div>
+
+        <main class="about-main">
+            <section class="about-hero">
+                <h1>Rooted in the steppe.<br>Built for the road.</h1>
+            </section>
+            <section class="about-story">
+                <div class="container">
+                    <p style="font-weight: 500;">
+                        Tamyr began as a question: what would nomadic outerwear look like today?
+                    </p>
+                    <p>
+                        We looked to the Silk Road, to the cold plateaus of Central Asia, to the deserts of the Middle East — and to the people who crossed them for centuries. What they wore was never fashion. It was survival, passed down through generations.
+                    </p>
+                    <p>
+                        Every Tamyr piece carries that lineage. The embroidery is inspired by traditional Kazakh and Bedouin motifs. The cuts are made for movement. The fabrics are chosen to last a lifetime, not a season.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="about-values">
+                <div class="container">
+                    <h2>What We Value</h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <span class="value-number">01</span>
+                            <h3>Craft</h3>
+                            <p>Every piece is finished by hand — embroidery, stitching, hardware. No shortcuts.</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-number">02</span>
+                            <h3>Heritage</h3>
+                            <p>Motifs and silhouettes drawn from nomadic cultures, reimagined for the present.</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-number">03</span>
+                            <h3>Durability</h3>
+                            <p>Built to be worn for decades, not seasons. Repair, don't replace.</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-number">04</span>
+                            <h3>Movement</h3>
+                            <p>Designed for the road, the desert, the city — wherever you're headed.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-name">
+                <div class="container">
+                    <p class="name-line">
+                        <span class="name-eng">Tamyr</span>
+                        <span class="name-kaz">тамыр</span>
+                    </p>
+                    <p class="name-meaning">Turkic for <em>root</em> or <em>vein</em>.</p>
+                    <p class="name-detailed">The thing that connects you to where you came from.<br>The thing that keeps you alive.</p>
+                </div>
+            </section>
+
+            <section class="about-btns">
+                <a href="products.html" class="btn btn-dark">Shop Women</a>
+                <a href="products.html" class="btn btn-outline">Shop Men</a>
+            </section>
+        </main>
+
         <footer>
-            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <p>&copy; Tamyr 2026. All rights reserved.</p>
         </footer>
     </body>
 </html>
