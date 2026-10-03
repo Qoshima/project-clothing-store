@@ -1,68 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Checkout</title>
-        <link rel="stylesheet" href="checkout.css">
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-            <img class="logo" src="icon.png" alt="logo"/>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Catalog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="size-guide.html">Size Guide</a></li>
-                <li><a href="contact.html">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Tamyr</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Isometra&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+
+    <script src="checkout.js" defer></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <p>FREE SHIPPING ON ORDERS OVER 670,000 tenge &nbsp;|&nbsp; 30-DAY RETURNS</p>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img class="logo" src="icosvg/icon.PNG" alt="Tamyr - home">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="products.html#new-in">New In</a></li>
+                <li><a href="products.html#women">Women</a></li>
+                <li><a href="products.html#men">Men</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="size-guide.html">Sizes</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            </div>
-        </header>
-        <div class="wrapper">
-            <main>
-                <a href=""><img class="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnt2nnWDFRxVVgGPrZ4izOQg_Dzi9MieO_K1J7xQ3kvA&s=10" alt="arrow left" /></a>
-                <h1>Checkout</h1>
-                <div class="parent">
-                    <form action="" method="POST">
-                    <fieldset>
-                        <legend>Contact info</legend>
-                        <input type="email" id="email" name="email" placeholder="Email" required/>
-                        <input type="text" id="phone" name="phone" placeholder="Phone" required/>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Shipping</legend>
-                        <input type="text" id="firstname" name="firstname" placeholder="First Name">
-                        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
-                        <input type="text" id="country" name="counrty" placeholder="Country">
-                        <input type="text" id="state" name="state" placeholder="State/Region">
-                        <input type="text" id="address" name="address" placeholder="Address">
-                        <input type="text" id="city" name="city" placeholder="City">
-                        <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code">
-                        <button class="btn" type="Submit">Shipping</button>
-                    </fieldset>
-                    </form>
-                    <div class="order">
-                        <h2>Your Order</h2>
-                        <div class="item">
-                            <img src="" alt="item image" />
-                            <article>
-                                <p class="pre-price">Black Heavy T-Shirt</p>
-                                <p class="pre-price">Black/L</p>
-                                <p class="price">$99</p>
-                            </article>
+        </nav>
+
+        <div class="header-icons">
+            <a href="account.html" aria-label="Account">
+                <img src="icosvg/account.svg" alt="">
+            </a>
+            <a href="checkout.html" aria-label="Cart" aria-current="page">
+                <img src="icosvg/cart.svg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main class="page-main checkout-page">
+        <a href="products.html" class="checkout-back">
+            &larr; Back to catalog
+        </a>
+
+        <div class="checkout-heading">
+            <h1>Checkout</h1>
+            <p>Complete your contact and shipping details.</p>
+            <p class="demo-note">
+                This is a demo checkout. No order or payment will be processed.
+            </p>
+        </div>
+
+        <div class="checkout-layout">
+            <form id="checkout-form" class="checkout-form">
+                <fieldset>
+                    <legend>Contact information</legend>
+
+                    <div class="checkout-field">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="phone">Phone *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            autocomplete="tel"
+                            placeholder="+7 700 123 45 67"
+                            required
+                        >
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shipping address</legend>
+
+                    <div class="checkout-fields-row">
+                        <div class="checkout-field">
+                            <label for="firstname">First name *</label>
+                            <input
+                                type="text"
+                                id="firstname"
+                                name="firstname"
+                                autocomplete="given-name"
+                                required
+                            >
                         </div>
-                        <article>
-                            <p class="pre-price">Total</p>
-                            <p class="price">$99</p>
-                        </article>
+
+                        <div class="checkout-field">
+                            <label for="lastname">Last name *</label>
+                            <input
+                                type="text"
+                                id="lastname"
+                                name="lastname"
+                                autocomplete="family-name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="country">Country *</label>
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            autocomplete="country-name"
+                            required
+                        >
+                    </div>
+
+                    <div class="checkout-fields-row">
+                        <div class="checkout-field">
+                            <label for="state">State / Region</label>
+                            <input
+                                type="text"
+                                id="state"
+                                name="state"
+                                autocomplete="address-level1"
+                            >
+                        </div>
+
+                        <div class="checkout-field">
+                            <label for="city">City *</label>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                autocomplete="address-level2"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="address">Street address *</label>
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            autocomplete="street-address"
+                            required
+                        >
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="postalcode">Postal code *</label>
+                        <input
+                            type="text"
+                            id="postalcode"
+                            name="postalcode"
+                            autocomplete="postal-code"
+                            required
+                        >
+                    </div>
+                </fieldset>
+
+                <p class="checkout-required">* Required fields</p>
+
+    
+                <button
+                    id="checkout-submit"
+                    class="btn btn-dark checkout-submit"
+                    type="submit"
+                >
+                    Confirm demo order
+                </button>
+
+                <noscript>
+                    <p>Enable JavaScript to use the demo confirmation.</p>
+                </noscript>
+
+                <p
+                    id="checkout-message"
+                    class="checkout-message"
+                    role="status"
+                ></p>
+            </form>
+
+            <aside class="order-summary" aria-labelledby="order-title">
+                <h2 id="order-title">Your order</h2>
+                <p class="order-demo">Sample item for this demo</p>
+
+                <div class="order-item">
+                    <img
+                        src="products/women/01.png"
+                        alt="Black ornament skirt"
+                        width="100"
+                        height="130"
+                    >
+
+                    <div class="order-item-info">
+                        <h3>Ornament Skirt</h3>
+                        <p>Black / M</p>
+                        <p>Quantity: 1</p>
+                        <p class="order-item-price">670000 tenge</p>
                     </div>
                 </div>
-            </main>
+
+                <dl class="order-totals">
+                    <div>
+                        <dt>Subtotal</dt>
+                        <dd>670000 tenge</dd>
+                    </div>
+
+                    <div>
+                        <dt>Shipping</dt>
+                        <dd>Free</dd>
+                    </div>
+
+                    <div class="order-total">
+                        <dt>Total</dt>
+                        <dd>670000 tenge</dd>
+                    </div>
+                </dl>
+
+                <p class="order-help">
+                    Need help with your purchase?
+                    <a href="contact.html">Contact us</a>.
+                </p>
+            </aside>
         </div>
-        <footer>
-            <p>&copy; 2024 My Website. All rights reserved.</p>
-        </footer>
-    </body>
+    </main>
+
+    <footer>
+        <p>&copy; Tamyr 2026. All rights reserved.</p>
+    </footer>
+</body>
 </html>
