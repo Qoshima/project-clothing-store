@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-.home-main {
-    flex:1;
-}
-
 body {
     background-color: #f5f3ef;
     color: #1a1a1a;
@@ -83,47 +79,14 @@ header nav a:hover {
     color: #1a1a1a;
     transition: opacity 0.2s;
 }
+
 .header-icons img {
     width: 30px;
     height: 30px;
 }
+
 .header-icons a:hover {
     opacity: 0.5;
-}
-
-.wrapper {
-    flex: 1;
-}
-
-.hero {
-    display: grid;
-    grid-template-columns: 2fr 4fr;
-    min-height: 70vh;
-    align-items: center;
-    padding: 40px 60px;
-    gap: 40px;
-}
-
-.hero-text h1 {
-    font-family: "Isometra", serif;
-    font-style: normal;
-    font-size: clamp(40px, 6vw, 80px);
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 35px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-}
-
-.hero-btns {
-    display: flex;
-    gap: 15px;
 }
 
 .btn {
@@ -157,61 +120,6 @@ header nav a:hover {
     color: #f5f3ef;
 }
 
-.scroll-hint {
-    margin-top: 60px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #999;
-    display: block;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 50px 60px 80px;
-    text-decoration: none;
-}
-
-.cat-card {
-    position: relative;
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
-}
-
-.cat-card a {
-    text-decoration: none;
-}
-.cat-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.cat-card:hover img {
-    transform: scale(1.03);
-}
-
-.cat-card span {
-    display: block;
-    margin-top: 12px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: center;
-    color: #1a1a1a;
-}
-
 footer {
     background-color: #1a1a1a;
     color: #f5f3ef;
@@ -220,6 +128,7 @@ footer {
     font-size: 13px;
     letter-spacing: 1px;
 }
+
 @media (max-width: 992px) {
     header {
         flex-wrap: wrap;
@@ -236,59 +145,15 @@ footer {
         justify-content: center;
         gap: 18px;
     }
-
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        padding: 32px 24px;
-        gap: 24px;
-    }
-
-    .hero-btns {
-        flex-wrap: wrap;
-    }
-
-    .categories {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
-/*responsive*/
 @media (max-width: 576px) {
     header {
-        flex-wrap: wrap;
         padding: 16px 20px;
         gap: 16px;
     }
 
-    header nav {
-        order: 3;
-        width: 100%;
-    }
-
     header nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 12px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 32px 20px;
-        min-height: auto;
-        gap: 24px;
-    }
-
-    .hero-btns {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .hero-image {
-        max-height: none;
-    }
-
-    .categories {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
     }
 }
