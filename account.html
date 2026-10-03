@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamyr | My Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top-bar">
+    <p>FREE SHIPPING ON ORDERS OVER 670,000 tenge &nbsp;|&nbsp; 30-DAY RETURNS</p>
+</div>
+<header>
+    <a href="index.html" class="logo-link">
+        <img class="logo" src="icosvg/icon.PNG" alt="Tamyr - home"/>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="products.html">New In</a></li>
+            <li><a href="products.html#women">Women</a></li>
+            <li><a href="products.html#men">Men</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="size-guide.html">Sizes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+        <a href="account.html" aria-label="Account"><img src="icosvg/account.svg" alt="Account"></a>
+        <a href="checkout.html" aria-label="Cart"><img src="icosvg/cart.svg" alt="Cart"></a>
+    </div>
+</header>
+<main class="account-main">
+    <div class="account-heading">
+        <h1>My Account</h1>
+        <p>Your everyday style starts here.</p>
+    </div>
+
+    <div class="account-layout">
+        <section class="account-panel" aria-labelledby="signin-title">
+            <h2 id="signin-title">Sign In</h2>
+            <p class="account-description">
+                Welcome back to Tamyr.
+            </p>
+
+            <form class="account-form" id="signin-form">
+                <div class="account-field">
+                    <label for="signin-email">Email address</label>
+                    <input
+                            type="email"
+                            id="signin-email"
+                            name="email"
+                            autocomplete="username"
+                            placeholder="you@example.com"
+                            required
+                    >
+                </div>
+
+                <div class="account-field">
+                    <label for="signin-password">Password</label>
+                    <input
+                            type="password"
+                            id="signin-password"
+                            name="password"
+                            autocomplete="current-password"
+                            required
+                    >
+                </div>
+
+                <button type="button" class="account-button">
+                    Sign In
+                </button>
+
+                <p class="account-message"
+                   id="signin-message"
+                   role="status"></p>
+            </form>
+        </section>
+
+        <section class="account-panel account-register"
+                 aria-labelledby="register-title">
+            <h2 id="register-title">
+                New to <span class="account-brand">Tamyr</span>?
+            </h2>
+
+            <p class="account-description">
+                Create your space for Kazakh-inspired style.
+            </p>
+
+            <p class="account-benefits-label">Planned account features:</p>
+
+            <ul class="account-benefits">
+                <li>Save your favourite pieces</li>
+                <li>View your order history</li>
+                <li>Enjoy a faster checkout</li>
+            </ul>
+
+            <details class="registration-details">
+                <summary>Create Account</summary>
+
+                <form class="account-form" id="register-form">
+                    <div class="account-field">
+                        <label for="register-name">Full name</label>
+                        <input
+                                type="text"
+                                id="register-name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                        >
+                    </div>
+
+                    <div class="account-field">
+                        <label for="register-email">Email address</label>
+                        <input
+                                type="email"
+                                id="register-email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                required
+                        >
+                    </div>
+
+                    <div class="account-field">
+                        <label for="register-password">Password</label>
+                        <input
+                                type="password"
+                                id="register-password"
+                                name="password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                aria-describedby="password-hint"
+                                required
+                        >
+                        <small id="password-hint">
+                            Use at least 8 characters.
+                        </small>
+                    </div>
+
+                    <button type="button" class="account-button">
+                        Register
+                    </button>
+
+                    <p class="account-message"
+                       id="register-message"
+                       role="status"></p>
+                </form>
+            </details>
+        </section>
+    </div>
+
+    <p class="account-demo">
+        Demo page — accounts are not created and form data is not sent.
+        Please use sample details.
+    </p>
+</main>
+<footer>
+    <p>&copy; Tamyr 2026. All rights reserved.</p>
+</footer>
+</body>
+</html>

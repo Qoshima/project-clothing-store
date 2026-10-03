@@ -1,0 +1,198 @@
+.account-main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+
+.account-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.account-heading h1 {
+    margin-bottom: 12px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+}
+
+.account-heading p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.account-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: start;
+}
+
+.account-panel {
+    min-width: 0;
+    padding: 36px;
+    border: 1px solid #d8d0c5;
+}
+
+.account-panel h2 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.account-brand {
+    font-family: "Isometra", serif;
+    font-weight: 400;
+}
+
+.account-description {
+    margin-bottom: 28px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.account-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.account-field label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.account-field input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #82796f;
+    border-radius: 0;
+    background-color: #fff;
+    color: #1a1a1a;
+    font: inherit;
+    font-size: 16px;
+}
+
+.account-field input:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+.account-field small {
+    color: #66615b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.account-button {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #1a1a1a;
+    background-color: #1a1a1a;
+    color: #f5f3ef;
+    font: inherit;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.account-button:hover {
+    background-color: #3d3d3d;
+}
+
+.account-button:focus-visible,
+.registration-details summary:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 4px;
+}
+
+.account-register {
+    background-color: #efe8de;
+}
+
+.account-benefits-label {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 13px;
+}
+
+.account-benefits {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.account-benefits li + li {
+    margin-top: 10px;
+}
+
+.registration-details summary {
+    padding: 15px 20px;
+    border: 1px solid #1a1a1a;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.registration-details summary:hover {
+    background-color: #1a1a1a;
+    color: #f5f3ef;
+}
+
+.registration-details[open] summary {
+    margin-bottom: 24px;
+}
+
+.account-message {
+    color: #48634f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.account-message:empty {
+    display: none;
+}
+
+.account-demo {
+    margin-top: 28px;
+    text-align: center;
+    color: #66615b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .account-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .account-main {
+        padding: 40px 20px 60px;
+    }
+
+    .account-heading {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .account-panel {
+        padding: 24px 20px;
+    }
+}
