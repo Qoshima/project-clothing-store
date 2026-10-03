@@ -4,87 +4,122 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Size Guide</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="size-guide.css">
+        <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="top-bar">
+            <p>FREE SHIPPING ON ORDERS OVER $50 &nbsp;|&nbsp; 30-DAY RETURNS</p>
+        </div>
         <header>
-            <div class="navbar">
-            <img class="logo" src="icon.png" alt="logo"/>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Catalog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="size-guide.html">Size Guide</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="icosvg/icon.PNG" alt="Tamyr - home"/>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">New In</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="size-guide.html">Sizes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="account.html" aria-label="Account"><img src="icosvg/account.svg" alt="Account"></a>
+                <a href="checkout.html" aria-label="Cart"><img src="icosvg/cart.svg" alt="Cart"></a>
             </div>
         </header>
-        <div class="wrapper">
-            <main>
-                <table>
-                    <tr>
-                        <th>Size</th>
-                        <th>Height (cm)</th>
-                        <th>Weight (kg)</th>
-                        <th>Sholders (cm)</th>
-                        <th>Bust (cm)</th>
-                        <th>Waist (cm)</th>
-                        <th>Hips (cm)</th>
-                    </tr>
-                    <tr>
-                        <td>XS</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>S</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td>M</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td>L</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td>XL</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                </table>    
-            </main>
-        </div>
+        <main class="size-main">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>SIZE GUIDE</h1>
+                    <!--<h2>SIZE GUIDE</h2>-->
+                </div>
+            </section>
+            <section class="table-wrapper">
+                <input type="radio" name="gender-toggle" id="toggle-women" class="toggle" checked>
+                <input type="radio" name="gender-toggle" id="toggle-men" class="toggle">
+                <div class="toggle-btns">
+                    <div class="hero-btns">
+                        <label for="toggle-women" class="btn btn-dark">WOMEN</label>
+                        <label for="toggle-men" class="btn btn-outline">MEN</label>
+                    </div>
+                </div>
+                <div id="table-women" class="table-section">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>SIZE</th>
+                                <th>CHEST (cm)</th>
+                                <th>WAIST (cm)</th>
+                                <th>HIPS (cm)</th>
+                                <th>SLEEVE (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>XS</td><td>81 - 86</td><td>61 - 66</td><td>86 - 91</td><td>56</td></tr>
+                            <tr><td>S</td><td>89 - 94</td><td>69 - 74</td><td>94 - 99</td><td>58</td></tr>
+                            <tr><td>M</td><td>97 - 102</td><td>76 - 81</td><td>102 - 107</td><td>61</td></tr>
+                            <tr><td>L</td><td>104 - 109</td><td>84 - 89</td><td>109 - 114</td><td>64</td></tr>
+                            <tr><td>XL</td><td>112 - 117</td><td>91 - 97</td><td>117 - 122</td><td>66</td></tr>
+                        </tbody>
+                    </table>    
+                </div>
+                <div id="table-men" class="table-section active-table">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>SIZE</th>
+                                <th>CHEST (cm)</th>
+                                <th>WAIST (cm)</th>
+                                <th>HIPS (cm)</th>
+                                <th>SLEEVE (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>S</td><td>91 - 97</td><td>76 - 81</td><td>91 - 97</td><td>84</td></tr>
+                            <tr><td>M</td><td>99 - 104</td><td>84 - 89</td><td>99 - 104</td><td>86</td></tr>
+                            <tr><td>L</td><td>107 - 112</td><td>91 - 97</td><td>107 - 112</td><td>89</td></tr>
+                            <tr><td>XL</td><td>114 - 119</td><td>99 - 104</td><td>114 - 119</td><td>91</td></tr>
+                            <tr><td>XXL</td><td>122 - 127</td><td>107 - 112</td><td>122 - 127</td><td>94</td></tr>
+                        </tbody>
+                    </table>    
+                </div>
+            </section>
+            <section class="measure-guide">
+                <div class="container">
+                    <h2 id="measure-title">How to Measure</h2>
+                    <div class="measure-grid">
+                        <div class="measure-item">
+                            <span class="measure-number">01</span>
+                            <h3>Chest</h3>
+                            <p>Measure around the fullest part of your chest, keeping the tape horizontal and snug but not tight.</p>
+                        </div>
+                        <div class="measure-item">
+                            <span class="measure-number">02</span>
+                            <h3>Waist</h3>
+                            <p>Measure around the narrowest part of your waist, usually just above the belly button.</p>
+                        </div>
+                        <div class="measure-item">
+                            <span class="measure-number">03</span>
+                            <h3>Hips</h3>
+                            <p>Stand with feet together and measure around the fullest part of your hips and seat.</p>
+                        </div>
+                        <div class="measure-item">
+                            <span class="measure-number">04</span>
+                            <h3>Sleeve</h3>
+                            <p>Measure from the center back of your neck, over the shoulder, down to the wrist bone.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
         <footer>
             <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
