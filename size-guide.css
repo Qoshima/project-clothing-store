@@ -4,6 +4,9 @@
 body{
     background-color: #faf7f2;
     color: #242424;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header, footer{
     background-color: #efe8de;
@@ -11,6 +14,9 @@ header, footer{
 }
 footer{
     text-align: center;
+}
+.wrapper{
+    flex: 1;
 }
 .navbar {
     display: flex;
