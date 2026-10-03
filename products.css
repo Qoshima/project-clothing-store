@@ -4,6 +4,9 @@
 body{
     background-color: #faf7f2;
     color: #242424;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header, footer{
     background-color: #efe8de;
@@ -61,9 +64,13 @@ a:active{
     display:grid;
     grid-template-areas: "header" "parent" "footer";
     grid-template-rows: auto 1fr auto;
+    flex: 1;
 }
 header{
     grid-area: header;
+}
+.parent{
+    grid-area: parent;
 }
 
 sidebar{
