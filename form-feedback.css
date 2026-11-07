@@ -1,0 +1,39 @@
+
+.account-field .field-error,
+.contact-field .field-error {
+    display: block;
+    margin-top: 6px;
+    color: #a12b2b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.account-field input.input-error,
+.contact-field input.input-error,
+.contact-field textarea.input-error {
+    border-color: #a12b2b;
+}
+
+.form-message {
+    display: none;
+    margin-top: 16px;
+    color: #48634f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.faq-question {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 4px;
+}
