@@ -14,7 +14,7 @@ $(document).ready(function () {
         return products.find(function (p) { return p.id === id; });
     }
 
-    // Function with return value
+
     function calculateTotals(cart) {
         let subtotal = 0;
         for (const item of cart) {
@@ -93,7 +93,6 @@ $(document).ready(function () {
         });
     }
 
-    // --- Form validation ---
     function validatePhone(value) {
         const digits = value.replace(/\D/g, "");
         if (!value.trim()) return "Enter your phone number.";
