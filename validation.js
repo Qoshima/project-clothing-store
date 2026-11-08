@@ -64,7 +64,7 @@ function validateMessage(value) {
 
 function showFieldError(selector, message) {
     var input = $(selector);
-    var field = input.closest(".account-field, .contact-field");
+    var field = input.closest(".account-field, .contact-field, .checkout-field");
     var error = field.find(".field-error");
     var errorId = input.attr("id") + "-error";
 

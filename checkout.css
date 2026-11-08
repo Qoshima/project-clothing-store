@@ -137,7 +137,14 @@
     font-size: 14px;
     line-height: 1.7;
 }
-
+.account-message {
+    color: #48634f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.account-message:empty {
+    display: none;
+}
 .order-summary {
     min-width: 0;
     padding: 28px;

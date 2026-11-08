@@ -1,6 +1,7 @@
 
 .account-field .field-error,
-.contact-field .field-error {
+.contact-field .field-error,
+.checkout-field .field-error {
     display: block;
     margin-top: 6px;
     color: #a12b2b;
@@ -11,7 +12,8 @@
 
 .account-field input.input-error,
 .contact-field input.input-error,
-.contact-field textarea.input-error {
+.contact-field textarea.input-error,
+.checkout-field input.input-error {
     border-color: #a12b2b;
 }
 

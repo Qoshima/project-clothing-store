@@ -218,11 +218,21 @@ document.addEventListener("DOMContentLoaded", function () {
       feedback.textContent = product.name + (wasAdded ? " added to favorites." : " removed from favorites.");
       renderProducts();
     } else if (button.dataset.action === "cart") {
-      const wasAdded = addToCart(product.id);
-      feedback.textContent = wasAdded ? product.name + " added to your bag." :
+    const wasAdded = addToCart(product.id);
+    feedback.textContent = wasAdded ? product.name + " added to your bag." :
         "Cannot add item (storage disabled or maximum quantity reached).";
-      updateCartCounter();
+    updateCartCounter();
+
+    if (wasAdded) {
+        const originalText = button.textContent;
+        button.textContent = "Added!";
+        button.disabled = true;
+        setTimeout(function () {
+            button.textContent = originalText;
+            button.disabled = false;
+        }, 1500);
     }
+}
   });
 
   document.querySelectorAll('a[href="#women"], a[href="#men"]').forEach(function (link) {
