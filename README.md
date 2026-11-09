@@ -1,68 +1,73 @@
-# Tamyr — Clothing Store
+# TAMYR — Clothing Store
 
-Tamyr is a responsive clothing store website created for the Web Technologies midterm project at Astana IT University. The concept combines everyday fashion with Kazakh-inspired ornaments and ethnic details.
+TAMYR is a responsive and interactive clothing store inspired by Kazakh culture and modern streetwear.
+
+Developed as a **Web Technologies Endterm Project** at Astana IT University. The project extends our midterm website with JavaScript and jQuery functionality while preserving the original design.
 
 ## Team
 
-Group: **SE-2524**
-
+**Group SE-2524**
 - Yernur Alimbekov
 - Ulzhan Musakhan
 - Assel Yermekkyzy
 
-## Links
+## Live Demo
 
-- Website: https://qoshima.github.io/project-clothing-store/
-- Repository: https://github.com/Qoshima/project-clothing-store
+- [Website](https://qoshima.github.io/project-clothing-store/)
+- [GitHub Repository](https://github.com/Qoshima/project-clothing-store)
+
+## Technologies
+
+HTML5, CSS3, JavaScript, jQuery, Bootstrap 5, LocalStorage, GitHub Pages.
 
 ## Pages
 
-| Page | Description |
-| --- | --- |
-| Home (`index.html`) | Brand introduction, collection images and shopping links. |
-| Catalog (`products.html`) | Women's and men's collections with six products in each section, images, descriptions and prices. |
-| About (`about.html`) | The brand's story, values and inspiration. |
-| Size Guide (`size-guide.html`) | Women's and men's size tables and instructions for taking measurements. |
-| Contact (`contact.html`) | Contact form, contact details and frequently asked questions. |
-| Account (`account.html`) | Demo sign-in and registration forms. |
-| Checkout (`checkout.html`) | Contact and shipping fields with a sample order summary. |
+- **Home** — Brand introduction and collections.
+- **Products** — Interactive catalog with 12 products.
+- **About** — Brand identity and heritage.
+- **Size Guide** — Size charts and measurements.
+- **Contact** — Validated form and interactive FAQ.
+- **Account** — Demo registration and sign-in.
+- **Checkout** — Shopping cart and order summary.
 
-## Features
+## Endterm Features
 
-- Shared header, navigation and footer across all seven pages.
-- Catalog sidebar and anchor links to the women's and men's collections.
-- Responsive product cards with hover effects and positioned New badges.
-- Size tables switched using radio buttons and CSS, without JavaScript.
-- Measurement diagram with written instructions.
-- Forms with labels, appropriate input types and required fields.
-- Expandable registration section using the HTML `details` and `summary` elements.
-- Consistent colors, typography and spacing across the website.
+- Dynamic product rendering using JavaScript arrays and DOM manipulation.
+- Live search, category filtering, and price sorting.
+- Favorites and shopping cart using LocalStorage.
+- Cart quantity controls and automatic total calculation.
+- Form validation with field-specific errors and success messages.
+- Interactive FAQ using jQuery animations.
+- Event handling using `click`, `input`, `change`, and `submit`.
 
-## Technologies and Layout
+## JavaScript & jQuery Concepts
 
-- **HTML5:** semantic elements including `header`, `nav`, `main`, `section`, `article`, `aside` and `footer`; tables and forms.
-- **CSS3:** shared styles in `styles.css` and separate stylesheets for individual pages.
-- **Flexbox:** navigation, product card content and other aligned groups of elements.
-- **CSS Grid:** page layouts, including the catalog sidebar and checkout columns.
-- **Positioning:** relative positioning for product image containers and absolute positioning for New badges.
-- **Bootstrap 5.3.8:** grid classes such as `row`, `col-12`, `col-sm-6` and `col-lg-4`, plus utilities such as `text-center`, `mb-5`, `mb-3` and `mx-auto`.
-- **Google Fonts:** Inter and Isometra.
-- **GitHub Pages:** website hosting.
+- **Arrays & Loops:** `for...of`, `forEach`, `filter`, `sort`.
+- **Functions:** Reusable functions with parameters and return values.
+- **DOM:** `createElement`, `appendChild`, `querySelector`.
+- **Events:** `addEventListener`, `preventDefault`.
+- **jQuery:** Selectors, `closest`, `find`, `siblings`, `slideUp`, `slideDown`, `fadeIn`, `fadeOut`.
 
-## Responsive Design
+## How to Run
 
-Media queries at **992px** and **576px** adapt the layouts for smaller screens. The Account page also uses a **768px** breakpoint. Navigation wraps, multi-column sections stack, and spacing adjusts as the screen becomes narrower.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Qoshima/project-clothing-store.git
+   ```
+2. Open `index.html` in your browser or use a local development server.
+3. An internet connection is required for CDN libraries and fonts.
 
-The catalog uses Bootstrap columns to display one product per row on small phones, two from 576px, and three from 992px.
+## Testing
 
-## Running Locally
+1. **Catalog:** Search, filter, sort, save favorites, and add products to the cart.
+2. **Checkout:** Change quantities, remove items, and test form validation.
+3. **Account:** Test registration and sign-in with sample credentials.
+4. **Contact:** Submit invalid and valid form data, then test the FAQ accordion.
 
-1. Download the repository ZIP and extract it, or clone the repository.
-2. Open `index.html` in a web browser. Alternatively, open the project in VS Code or WebStorm and use a local preview server.
-3. Keep the existing folder structure so image and stylesheet paths continue to work.
+## Notes
 
-No installation or build step is required. An internet connection is needed to load Bootstrap and Google Fonts from their CDNs.
+This is a frontend demonstration project. No real payments, account authentication, or message delivery are implemented. Cart and favorites data are stored locally in the browser.
 
-## Demo Limitations
+---
 
-This is a static frontend project built with HTML and CSS. It has no backend, database or JavaScript application logic. Contact messages are not delivered, accounts are not created, and orders or payments are not processed. Checkout displays a fixed sample item rather than a working shopping cart. Products and prices are demonstration content.
+**Astana IT University | Web Technologies | 2026**
