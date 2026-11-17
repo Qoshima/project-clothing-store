@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="checkout-final.css">
     <link rel="stylesheet" href="form-feedback.css">
 </head>
 
@@ -233,6 +234,22 @@
             </section>
         </div>
 
+        <section class="account-panel order-history">
+            <h2>Order History</h2>
+
+            <p id="orders-empty">No demo orders yet.</p>
+
+            <ul id="orders-list"></ul>
+
+            <button
+                type="button"
+                id="clear-orders"
+                class="account-button"
+                hidden>
+                Clear history
+            </button>
+        </section>
+
         <p class="account-demo">
             Demo only. Use sample details.
             Register and sign in in this tab.
@@ -249,5 +266,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="validation.js"></script>
     <script src="account.js"></script>
+    <script src="js/order-history.js"></script>
 </body>
 </html>

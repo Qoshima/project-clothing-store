@@ -1,0 +1,87 @@
+.checkout-form [hidden], 
+.order-history [hidden] { display: none !important; }
+
+.checkout-progress { 
+    margin-bottom: 24px; 
+    font-size: 14px; 
+    font-weight: 500; 
+}
+
+.checkout-navigation { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+}
+
+.checkout-navigation .btn { 
+    flex: 1; text-align: center; 
+    font-family: inherit; 
+    border: 1px solid #1a1a1a; 
+}
+
+.checkout-navigation .checkout-submit { 
+    width: auto; 
+}
+
+.checkout-review h2 { 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    font-weight: 500; 
+}
+
+.checkout-review h3 { 
+    margin: 18px 0 8px; 
+    font-size: 14px; 
+    font-weight: 500;
+}
+
+.checkout-review p, .checkout-review li { 
+    font-size: 14px; 
+    line-height: 1.7; 
+}
+
+.checkout-review ul { 
+    padding-left: 20px; 
+}
+
+#review-total { 
+    margin-top: 20px; 
+    font-weight: 500; 
+}
+
+.quantity-controls { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px; 
+}
+
+.quantity-controls button { 
+    padding: 5px 9px;
+    background: #fff;
+    color: #1a1a1a; border:
+    1px solid #82796f; 
+    cursor: pointer; 
+    }
+
+.order-history { 
+    margin-top: 32px; 
+}
+
+.order-history ul { 
+    padding-left: 20px; 
+}
+
+.order-history li { 
+    margin: 12px 0;
+     font-size: 14px; 
+    line-height: 1.6; 
+    overflow-wrap: anywhere; 
+}
+
+.order-history .account-button {
+     margin-top: 18px; 
+     max-width: 220px; 
+}
+
