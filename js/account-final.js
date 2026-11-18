@@ -97,6 +97,8 @@ $(document).ready(function () {
         }
     }
 
+    document.getElementById("clear-orders").addEventListener("click", renderDashboard);
+
     function renderDashboard() {
         const dashboard = new Dashboard();
         const grid = document.getElementById("dashboard-grid");
