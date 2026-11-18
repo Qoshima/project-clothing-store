@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const matching = products.filter(function (product) {
       const matchesName = (product.name + " " + product.color).toLowerCase().includes(query);
       const matchesCategory = selectedCategory === "all" ||
-        product.category === selectedCategory ||
-        (selectedCategory === "new" && product.isNew);
+          product.category === selectedCategory ||
+          (selectedCategory === "new" && product.isNew);
       const matchesFavorites = !onlyFavorites.checked || favorites.includes(product.id);
       return matchesName && matchesCategory && matchesFavorites;
     });
@@ -115,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
     favoriteButton.textContent = saved ? "♥ Saved" : "♡ Save";
     favoriteButton.setAttribute("aria-pressed", String(saved));
     favoriteButton.setAttribute("aria-label", saved ?
-      "Remove " + product.name + " from favorites" :
-      "Save " + product.name + " to favorites");
+        "Remove " + product.name + " from favorites" :
+        "Save " + product.name + " to favorites");
 
     const cartButton = document.createElement("button");
     cartButton.type = "button";
@@ -126,7 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
     cartButton.textContent = "Add to bag";
     cartButton.setAttribute("aria-label", "Add " + product.name + " to bag");
 
-    actions.append(favoriteButton, cartButton);
+    // Quick view button
+    const quickButton = document.createElement("button");
+    quickButton.type = "button";
+    quickButton.className = "product-action quick-view-button";
+    quickButton.dataset.action = "quick-view";
+    quickButton.dataset.id = product.id;
+    quickButton.textContent = "Quick View";
+
+    actions.append(favoriteButton, cartButton, quickButton);
     info.append(title, details, price, actions);
     card.append(imageBox, info);
     column.appendChild(card);
@@ -218,21 +226,21 @@ document.addEventListener("DOMContentLoaded", function () {
       feedback.textContent = product.name + (wasAdded ? " added to favorites." : " removed from favorites.");
       renderProducts();
     } else if (button.dataset.action === "cart") {
-    const wasAdded = addToCart(product.id);
-    feedback.textContent = wasAdded ? product.name + " added to your bag." :
-        "Cannot add item (storage disabled or maximum quantity reached).";
-    updateCartCounter();
+      const wasAdded = addToCart(product.id);
+      feedback.textContent = wasAdded ? product.name + " added to your bag." :
+          "Cannot add item (storage disabled or maximum quantity reached).";
+      updateCartCounter();
 
-    if (wasAdded) {
+      if (wasAdded) {
         const originalText = button.textContent;
         button.textContent = "Added!";
         button.disabled = true;
         setTimeout(function () {
-            button.textContent = originalText;
-            button.disabled = false;
+          button.textContent = originalText;
+          button.disabled = false;
         }, 1500);
+      }
     }
-}
   });
 
   document.querySelectorAll('a[href="#women"], a[href="#men"]').forEach(function (link) {

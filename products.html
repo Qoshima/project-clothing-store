@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="catalog-interactive.css">
-   
+    <link rel="stylesheet" href="catalog-final.css">
 </head>
 <body>
 <div class="top-bar">
@@ -34,9 +34,7 @@
         </ul>
     </nav>
     <div class="header-icons">
-        <a href="account.html" aria-label="Account">
-            <img src="icosvg/account.svg" alt="">
-        </a>
+        <a href="account.html" aria-label="Account"><img src="icosvg/account.svg" alt=""></a>
         <a href="checkout.html" aria-label="Cart" class="cart-link">
             <img src="icosvg/cart.svg" alt="">
             <span id="cart-count" class="cart-count" hidden>0</span>
@@ -111,8 +109,7 @@
                 </div>
                 <div class="catalog-tools-bottom">
                     <label class="favorites-label" for="favorites-only">
-                        <input type="checkbox" id="favorites-only">
-                        Show favorites only
+                        <input type="checkbox" id="favorites-only"> Show favorites only
                     </label>
                     <button type="button" class="reset-filters" id="reset-filters">Reset filters</button>
                 </div>
@@ -120,12 +117,37 @@
                 <p id="catalog-feedback" class="catalog-feedback" role="status" aria-live="polite"></p>
             </section>
 
+            <!--Feature 1 Weather API, outfit suggestion-->
+            <section class="final-panel" aria-labelledby="weather-title">
+                <h2 id="weather-title">What to wear today?</h2>
+                <p>Check the weather and discover pieces from our collection.</p>
+                <div class="weather-controls">
+                    <label for="weather-city">City</label>
+                    <select id="weather-city">
+                        <option value="51.1694,71.4491">Astana</option>
+                        <option value="43.2220,76.8512">Almaty</option>
+                        <option value="42.3154,69.5869">Shymkent</option>
+                    </select>
+                    <button type="button" id="weather-button">Check weather</button>
+                </div>
+                <p id="weather-status" role="status" aria-live="polite">Choose a city and check the weather.</p>
+                <div id="weather-results" class="final-cards"></div>
+                <p class="weather-source">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Suggestions are based on temperature.</p>
+            </section>
+
+            <!-- Feature 2 recently viewed products -->
+            <section class="final-panel" aria-labelledby="recent-title">
+                <div class="final-heading">
+                    <h2 id="recent-title">Recently viewed</h2>
+                    <button type="button" id="clear-recent" hidden>Clear history</button>
+                </div>
+                <p id="recent-empty">Use Quick View on a product to see it here.</p>
+                <div id="recent-products" class="final-cards"></div>
+            </section>
+
             <section id="women" class="catalog-section" aria-labelledby="women-title">
                 <div class="collection-heading">
-                    <div>
-                        <p class="catalog-eyebrow">THE COLLECTION</p>
-                        <h2 id="women-title">Women</h2>
-                    </div>
+                    <div><p class="catalog-eyebrow">THE COLLECTION</p><h2 id="women-title">Women</h2></div>
                     <span class="collection-count">6 pieces</span>
                 </div>
 
@@ -135,10 +157,7 @@
 
             <section id="men" class="catalog-section" aria-labelledby="men-title">
                 <div class="collection-heading">
-                    <div>
-                        <p class="catalog-eyebrow">THE COLLECTION</p>
-                        <h2 id="men-title">Men</h2>
-                    </div>
+                    <div><p class="catalog-eyebrow">THE COLLECTION</p><h2 id="men-title">Men</h2></div>
                     <span class="collection-count">6 pieces</span>
                 </div>
                 <div class="row g-4" id="men-products"></div>
@@ -152,10 +171,22 @@
     </div>
 </main>
 
-<footer>
-    <p>&copy; Tamyr 2026. All rights reserved.</p>
-</footer>
+<!--Quick view-->
+<dialog id="quick-view-dialog" class="quick-view-dialog" aria-labelledby="quick-title">
+    <button type="button" id="quick-close" class="quick-close" aria-label="Close product details">×</button>
+    <img id="quick-image" src="" alt="" width="250" height="320">
+    <div class="quick-details">
+        <h2 id="quick-title"></h2>
+        <p id="quick-description"></p>
+        <p id="quick-price"></p>
+        <button type="button" id="quick-done">Close</button>
+    </div>
+</dialog>
+
+<footer><p>&copy; Tamyr 2026. All rights reserved.</p></footer>
 <script src="js/products-data.js"></script>
 <script src="js/catalog.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/quick-view.js"></script>
 </body>
 </html>
