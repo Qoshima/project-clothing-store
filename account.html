@@ -250,6 +250,58 @@
             </button>
         </section>
 
+        <section class="account-panel dashboard-section">
+            <h2>Personal Shopping Dashboard</h2>
+            <p class="account-description">Your activity at a glance.</p>
+            <div class="dashboard-grid" id="dashboard-grid">
+                
+            </div>
+        </section>
+
+        <section class="account-panel looks-section">
+            <div class="looks-header">
+                <div>
+                    <h2>My Looks</h2>
+                    <p class="account-description">Create your own outfits from our collection.</p>
+                </div>
+                <button type="button" id="create-look-btn" class="account-button btn-small">
+                    + Create New Look
+                </button>
+            </div>
+            
+            <div id="looks-empty" class="account-message">You haven't created any looks yet.</div>
+            <div class="looks-grid" id="looks-grid">
+                
+            </div>
+        </section>
+
+        <div class="custom-modal-overlay" id="look-modal" hidden>
+            <div class="custom-modal-content">
+                <h2 id="modal-title">Create New Look</h2>
+                <form id="look-form" novalidate>
+                    <input type="hidden" id="look-id">
+                    
+                    <div class="account-field">
+                        <label for="look-name">Look Name *</label>
+                        <input type="text" id="look-name" placeholder="e.g., Winter Streetwear" required>
+                        <span class="error-msg" id="look-name-error"></span>
+                    </div>
+
+                    <div class="account-field">
+                        <label>Select Products *</label>
+                        <div class="product-selection-grid" id="product-selection">
+                            
+                        </div>
+                        <span class="error-msg" id="look-items-error"></span>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" id="cancel-look-btn" class="account-button btn-outline">Cancel</button>
+                        <button type="submit" class="account-button">Save Look</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <p class="account-demo">
             Demo only. Use sample details.
             Register and sign in in this tab.
@@ -264,8 +316,10 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/products-data.js"></script> <!-- Added this -->
     <script src="validation.js"></script>
     <script src="account.js"></script>
     <script src="js/order-history.js"></script>
+    <script src="js/account-final.js"></script> <!-- Added this -->
 </body>
 </html>
